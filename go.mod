@@ -1,4 +1,4 @@
-module harry/gme
+module harry/getmyexe
 
 go 1.20
 

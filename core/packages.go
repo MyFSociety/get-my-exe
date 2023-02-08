@@ -1,4 +1,4 @@
-package main
+package getmyexe
 
 type packageStruct struct {
 	Name    string
@@ -17,4 +17,5 @@ func getPackage(name string) packageStruct {
 			return pkg
 		}
 	}
+	return packageStruct{}
 }
