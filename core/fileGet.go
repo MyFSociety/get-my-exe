@@ -1,4 +1,4 @@
-package getmyexe
+package core
 
 import (
 	"fmt"
@@ -8,11 +8,11 @@ import (
 	"github.com/cavaliergopher/grab/v3"
 )
 
-func getFileFromURL(url string) {
+func GetFileFromURL(url string) string {
 
 	// create client
 	client := grab.NewClient()
-	req, _ := grab.NewRequest(".", "https://mirrors.abhy.me/archlinux/iso/2023.02.01/archlinux-2023.02.01-x86_64.iso")
+	req, _ := grab.NewRequest(".", url)
 
 	// start download
 	fmt.Printf("Downloading %v...\n", req.URL())
@@ -44,6 +44,8 @@ Loop:
 		os.Exit(1)
 	}
 
-	fmt.Printf("Download saved to ./%v \n", resp.Filename)
+	// fmt.Printf("Download saved to ./%v \n", resp.Filename)
+
+	return resp.Filename
 
 }
