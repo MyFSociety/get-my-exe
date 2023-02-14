@@ -1,4 +1,4 @@
-package getmyexe
+package utils
 
 import (
 	"crypto/sha1"
